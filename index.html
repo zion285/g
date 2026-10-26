@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>to my moon, anis ♡</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;min-height:100vh;color:#f7f0ff;
+ font-family:Georgia,"Times New Roman",serif;
+ background:
+ radial-gradient(ellipse at 15% 15%,#40216c 0%,transparent 38%),
+ radial-gradient(ellipse at 85% 70%,#241653 0%,transparent 40%),
+ linear-gradient(145deg,#080519,#110925 55%,#050411);
+ overflow-x:hidden;
+}
+#stars{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+.star{
+ position:absolute;width:2px;height:2px;border-radius:50%;
+ background:white;box-shadow:0 0 8px #d7c5ff;
+ animation:twinkle 3s infinite alternate;
+}
+@keyframes twinkle{from{opacity:.2;transform:scale(.7)}to{opacity:1;transform:scale(1.3)}}
+.nebula{position:fixed;width:270px;height:270px;border-radius:50%;filter:blur(75px);opacity:.18;pointer-events:none}
+.n1{background:#a45dff;top:10%;left:-130px}
+.n2{background:#553dff;right:-130px;bottom:10%}
+.moon{
+ position:fixed;top:24px;right:24px;width:43px;height:43px;
+ border-radius:50%;background:#fff4d9;
+ box-shadow:0 0 20px #e7caff,0 0 55px #9d79ff;
+}
+.moon:after{
+ content:"";position:absolute;top:-7px;left:13px;
+ width:39px;height:39px;border-radius:50%;background:#100922;
+}
+main{position:relative;z-index:2;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:80px 18px 35px}
+.container{width:100%;max-width:690px}
+.top{text-align:center;margin-bottom:20px}
+.eyebrow{font-family:Arial,sans-serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#c7afff}
+h1{font-size:clamp(29px,7vw,47px);font-weight:normal;margin:12px 0;text-shadow:0 0 25px #9e77ff65}
+.subtitle{color:#cfc0e8;font-size:14px;line-height:1.7}
+.card{
+ border:1px solid #c9adff35;
+ background:linear-gradient(140deg,#ffffff0c,#9c6cff0a);
+ backdrop-filter:blur(15px);border-radius:24px;
+ padding:clamp(23px,6vw,43px);
+ box-shadow:0 20px 80px #0005,inset 0 0 30px #a16bff08;
+ min-height:345px;display:flex;flex-direction:column;justify-content:center;text-align:center;
+}
+.slide{display:none;animation:appear .55s ease}
+.slide.active{display:block}
+@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.emoji{font-size:35px;margin-bottom:17px}
+.slide h2{font-weight:normal;font-size:clamp(23px,5vw,32px);color:#e6d5ff;margin:0 0 20px}
+.message{font-size:17px;line-height:1.95;color:#f1e8ff;white-space:pre-line}
+.arabic{font-family:"Times New Roman",serif;font-size:clamp(25px,6vw,34px);line-height:2.05;direction:rtl;color:#f4e6ff;margin:20px 0}
+.translation{font-size:16px;line-height:1.9;color:#e0d2f5;font-style:italic}
+.reference{font-family:Arial,sans-serif;font-size:11px;letter-spacing:1.5px;color:#bba3f5;margin-top:17px}
+.heart{color:#d6aaff;font-size:21px;margin-top:20px}
+.controls{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:22px}
+button{font-family:Arial,sans-serif;cursor:pointer;border:1px solid #c9adff65;color:white;background:#8b64c82b;border-radius:30px;padding:12px 23px;font-size:13px;transition:.2s}
+button:hover{background:#a278ef55;transform:translateY(-2px)}
+button:disabled{opacity:.3;cursor:not-allowed;transform:none}
+.counter{color:#c4b2e8;font-family:Arial,sans-serif;font-size:12px;min-width:55px;text-align:center}
+.progress{height:3px;background:#ffffff14;border-radius:10px;margin-top:22px;overflow:hidden}
+.bar{height:100%;width:0%;background:linear-gradient(90deg,#8b66ff,#f0c6ff);transition:width .3s}
+.dots{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;margin-top:14px}
+.dot{width:6px;height:6px;border-radius:50%;background:#ffffff35;transition:.2s}
+.dot.active{background:#d7baff;box-shadow:0 0 9px #c7a0ff}
+.footer{text-align:center;margin-top:23px;font-size:12px;color:#aa98cb;line-height:1.8}
+@media(max-width:450px){
+ .card{min-height:390px;padding:24px 19px}
+ .message{font-size:16px}
+ .moon{width:32px;height:32px;top:17px;right:17px}
+ .moon:after{width:30px;height:30px;left:10px;top:-5px}
+}
+</style>
+</head>
+<body>
+<div id="stars"></div>
+<div class="nebula n1"></div>
+<div class="nebula n2"></div>
+<div class="moon"></div>
+
+<main>
+<div class="container">
+ <div class="top">
+  <div class="eyebrow">a little universe, just for you</div>
+  <h1>to my moon, anis ♡</h1>
+  <div class="subtitle">a little collection of love, prayers, and reminders for your heart</div>
+ </div>
+
+ <div class="card" id="card">
+
+  <section class="slide active">
+   <div class="emoji">🌙</div>
+   <h2>hey, my favourite person.</h2>
+   <div class="message">i made this little space just for you.
+
+nothing complicated, nothing you need to figure out. just a few words, some reminders from the Qur'an, and little prayers that i hope will bring you comfort whenever you need them.
+
+so take your time, read slowly, and remember that you deserve kindness too. ♡</div>
+   <div class="heart">✦ ♡ ✦</div>
+  </section>
+
+  <section class="slide">
+   <div class="emoji">☁️</div>
+   <h2>please take it slowly.</h2>
+   <div class="message">you don't have to figure everything out in one day.
+
+some days will be good, some days might be tiring, and some days you might just want to rest.
+
+that's okay. you are a human being, not a machine. you don't have to be productive every second to be worthy of something good.
+
+please be gentle with yourself, anis.</div>
+   <div class="heart">♡</div>
+  </section>
+
+  <section class="slide">
+   <div class="emoji">📖</div>
+   <h2>Allah knows your limits.</h2>
+   <div class="arabic">لَا يُكَلِّفُ اللَّهُ نَفْسًا إِلَّا وُسْعَهَا</div>
+   <div class="translation">“Allah does not burden a soul beyond what it can bear.”</div>
+   <div class="reference">SURAH AL-BAQARAH · 2:286</div>
+   <div class="message">when life feels difficult, remember that you can ask Allah for help. you don't have to carry every worry by yourself.</div>
+  </section>
+
+  <section class="slide">
+   <div class="emoji">✨</div>
+   <h2>hard times don't last forever.</h2>
+   <div class="arabic">فَإِنَّ مَعَ الْعُسْرِ يُسْرًا ۝ إِنَّ مَعَ الْعُسْرِ يُسْرًا</div>
+   <div class="translation">“For indeed, with hardship comes ease. Indeed, with hardship comes ease.”</div>
+   <div class="reference">SURAH ASH-SHARH · 94:5–6</div>
+   <div class="message">i pray that even on your hardest days, Allah lets you find little reasons to keep going and gives your heart some peace.</div>
+  </section>
+
+  <section class="slide">
+   <div class="emoji">🤲</div>
+   <h2>when you feel overwhelmed.</h2>
+   <div class="arabic">رَبِّ اشْرَحْ لِي صَدْرِي ۝ وَيَسِّرْ لِي أَمْرِي</div>
+   <div class="translation">“My Lord, expand my chest and make my task easy for me.”</div>
+   <div class="reference">SURAH TA-HA · 20:25–26</div>
+   <div class="message">you can say this dua before studying, before an important moment, or whenever your heart feels heavy. may Allah make things easier for you.</div>
+  </section>
+
+  <section class="slide">
+   <div class="emoji">🌱</div>
+   <h2>keep learning, one step at a time.</h2>
+   <div class="arabic">وَقُل رَّبِّ زِدْنِي عِلْمًا</div>
+   <div class="translation">“And say, ‘My Lord, increase me in knowledge.’”</div>
+   <div class="reference">SURAH TA-HA · 20:114</div>
+   <div class="message">before you study, take a breath and make this dua. you don't have to understand everything immediately. learning takes time, and every little effort counts.</div>
+  </section>
+
+  <section class="slide">
+   <div class="emoji">🌌</div>
+   <h2>your effort matters.</h2>
+   <div class="arabic">وَأَن لَّيْسَ لِلْإِنسَانِ إِلَّا مَا سَعَىٰ</div>
+   <div class="translation">“And that each person will only have what they endeavoured towards.”</div>
+   <div class="reference">SURAH AN-NAJM · 53:39</div>
+   <div class="message">don't compare your progress with someone else's. focus on what you can do today. even a small effort is still an effort, and you can be proud of trying.</div>
+  </section>
+
+  <section class="slide">
+   <div class="emoji">🕊️</div>
+   <h2>give your heart a moment.</h2>
+   <div class="arabic">أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ</div>
+   <div class="translation">“Surely in the remembrance of Allah do hearts find comfort.”</div>
+   <div class="reference">SURAH AR-RA'D · 13:28</div>
+   <div class="message">when your mind gets too noisy, take a little break. make dhikr, pray, or sit quietly for a while. you deserve a moment to breathe.</div>
+  </section>
+
+  <section class="slide">
+   <div class="emoji">⭐</div>
+   <h2>put your trust in Allah.</h2>
+   <div class="arabic">وَمَن يَتَوَكَّلْ عَلَى اللَّهِ فَهُوَ حَسْبُهُ</div>
+   <div class="translation">“And whoever puts their trust in Allah, then He is sufficient for them.”</div>
+   <div class="reference">SURAH AT-TALAQ · 65:3</div>
+   <div class="message">do your best, make dua, and leave what you cannot control to Allah. you don't need to know every answer right now.</div>
+  </section>
+
+  <section class="slide">
+   <div class="emoji">🌷</div>
+   <h2>Allah sees the good you do.</h2>
+   <div class="arabic">فَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍ خَيْرًا يَرَهُ</div>
+   <div class="translation">“So whoever does an atom's weight of good will see it.”</div>
+   <div class="reference">SURAH AZ-ZALZALAH · 99:7</div>
+   <div class="message">even the little things you do when nobody notices matter. keep trying to do good, even in the smallest ways.</div>
+  </section>
+
+  <section class="slide">
+   <div class="emoji">🌤️</div>
+   <h2>don't lose hope.</h2>
+   <div class="arabic">لَا تَقْنَطُوا مِن رَّحْمَةِ اللَّهِ</div>
+   <div class="translation">“Do not despair of the mercy of Allah.”</div>
+   <div class="reference">SURAH AZ-ZUMAR · 39:53</div>
+   <div class="message">if something doesn't go as planned, it doesn't mean everything is over. you can start again, ask Allah for guidance, and try once more.</div>
+  </section>
+
+  <section class="slide">
+   <div class="emoji">💜</div>
+   <h2>you can ask Allah for help.</h2>
+   <div class="arabic">إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ</div>
+   <div class="translation">“You alone we worship, and You alone we ask for help.”</div>
+   <div class="reference">SURAH AL-FATIHAH · 1:5</div>
+   <div class="message">you don't need perfect words when making dua. speak honestly to Allah about what you're worried about and what you're hoping for.</div>
+  </section>
+
+  <section class="slide">
+   <div class="emoji">🌙</div>
+   <h2>Allah is aware of you.</h2>
+   <div class="arabic">وَهُوَ مَعَكُمْ أَيْنَ مَا كُنتُمْ</div>
+   <div class="translation">“And He is with you wherever you are.”</div>
+   <div class="reference">SURAH AL-HADID · 57:4</div>
+   <div class="message">wherever life takes you, remember that Allah knows what you're going through. may remembering Him bring peace to your heart.</div>
+  </section>
+
+  <section class="slide">
+   <div class="emoji">🌸</div>
+   <h2>a dua for your studies.</h2>
+   <div class="message">ya Allah, please bless anis with beneficial knowledge, a calm heart, and a clear mind.
+
+make her studies easier, help her understand what she learns, and bless her time and effort.
+
+when she feels nervous, give her confidence. when she feels tired, give her strength. when she feels lost, guide her towards what is good.
+
+ameen ya rabbal alamin. 🤍</div>
+   <div class="heart">🤲 ♡</div>
+  </section>
+
+  <section class="slide">
+   <div class="emoji">💫</div>
+   <h2>you don't have to be perfect.</h2>
+   <div class="message">i hope you know that you don't have to be perfect for me to be proud of you.
+
+you can have a bad day. you can be tired. you can need time for yourself.
+
+i want you to take care of your studies, your health, your prayers, and yourself too.
+
+please don't feel guilty for needing rest. you're allowed to slow down.</div>
+   <div class="heart">♡</div>
+  </section>
+
+  <section class="slide">
+   <div class="emoji">🪐</div>
+   <h2>you deserve peace, too.</h2>
+   <div class="message">i never want the people who care about you to become another source of stress in your life.
+
+take care of your responsibilities, give yourself time to grow, and don't feel like you have to be available every second.
+
+the people who genuinely care about you should want to see you doing well, too.</div>
+   <div class="heart">you deserve understanding and kindness ♡</div>
+  </section>
+
+  <section class="slide">
+   <div class="emoji">🌠</div>
+   <h2>a little prayer for you.</h2>
+   <div class="message">may Allah protect you wherever you go, guide your decisions, bless your friendships, and keep you safe.
+
+may He put barakah in your time, ease your worries, and let your hard work lead you towards something good.
+
+may your heart find peace in the moments you need it most.
+
+ameen ya Allah. 🤍</div>
+   <div class="heart">🤲 ✨</div>
+  </section>
+
+  <section class="slide">
+   <div class="emoji">💌</div>
+   <h2>one last thing, anis.</h2>
+   <div class="message">i'm rooting for you, always.
+
+keep learning, keep making dua, and keep believing that better days are possible.
+
+you don't have to have everything figured out right now. just take the next step, then the next one.
+
+i hope this little corner of the universe reminds you to be patient with yourself and to keep Allah close to your heart.
+
+you've got this. one day at a time. ♡</div>
+   <div class="heart">with love, always ♡</div>
+  </section>
+
+ </div>
+
+ <div class="controls">
+  <button id="prev" type="button">← back</button>
+  <span class="counter" id="counter">01 / 17</span>
+  <button id="next" type="button">next →</button>
+ </div>
+ <div class="progress"><div class="bar" id="bar"></div></div>
+ <div class="dots" id="dots"></div>
+ <div class="footer">made with love, under the same sky ♡<br>may Allah always guide you</div>
+</div>
+</main>
+
+<script>
+(function(){
+ const stars=document.getElementById("stars");
+ for(let i=0;i<125;i++){
+  const s=document.createElement("span");
+  s.className="star";
+  s.style.left=(Math.random()*100)+"%";
+  s.style.top=(Math.random()*100)+"%";
+  s.style.animationDelay=(Math.random()*4)+"s";
+  s.style.animationDuration=(2+Math.random()*4)+"s";
+  const size=1+Math.random()*2;
+  s.style.width=size+"px";
+  s.style.height=size+"px";
+  stars.appendChild(s);
+ }
+
+ const slides=Array.from(document.querySelectorAll(".slide"));
+ const prev=document.getElementById("prev");
+ const next=document.getElementById("next");
+ const counter=document.getElementById("counter");
+ const bar=document.getElementById("bar");
+ const dots=document.getElementById("dots");
+ let current=0;
+
+ slides.forEach((slide,i)=>{
+  const dot=document.createElement("span");
+  dot.className="dot";
+  dot.setAttribute("aria-label","Go to slide "+(i+1));
+  dot.style.cursor="pointer";
+  dot.addEventListener("click",()=>showSlide(i));
+  dots.appendChild(dot);
+ });
+
+ function showSlide(index){
+  current=Math.max(0,Math.min(index,slides.length-1));
+  slides.forEach((slide,i)=>slide.classList.toggle("active",i===current));
+  Array.from(dots.children).forEach((dot,i)=>dot.classList.toggle("active",i===current));
+  counter.textContent=String(current+1).padStart(2,"0")+" / "+String(slides.length).padStart(2,"0");
+  bar.style.width=((current+1)/slides.length*100)+"%";
+  prev.disabled=current===0;
+  next.textContent=current===slides.length-1?"read again ↺":"next →";
+ }
+
+ prev.addEventListener("click",()=>showSlide(current-1));
+ next.addEventListener("click",()=>{
+  if(current===slides.length-1)showSlide(0);
+  else showSlide(current+1);
+ });
+
+ let startX=0;
+ const card=document.getElementById("card");
+ card.addEventListener("touchstart",e=>{startX=e.changedTouches[0].screenX},{passive:true});
+ card.addEventListener("touchend",e=>{
+  const dx=e.changedTouches[0].screenX-startX;
+  if(Math.abs(dx)>65)showSlide(current+(dx<0?1:-1));
+ },{passive:true});
+
+ document.addEventListener("keydown",e=>{
+  if(e.key==="ArrowRight")showSlide(current+1);
+  if(e.key==="ArrowLeft")showSlide(current-1);
+ });
+ showSlide(0);
+})();
+</script>
+</body>
+</html>
